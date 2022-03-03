@@ -1,0 +1,5 @@
+{{- with  .Site.GetPage (.Get 0)  -}}
+    {{- .Content -}}
+{{- else -}}
+    {{- errorf "Can't find snippet reference %q in topic %s." (.Get 0) .Position -}}
+{{- end -}}
